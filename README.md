@@ -12,11 +12,11 @@ The internship is structured into 11 weeks, each focusing on different aspects o
 - **Week 4:** Introduction to React components and JSX
 - **Week 5:** State management in React
 - **Week 6:** React Router, forms with validation, useEffect, API fetching
-- **Week 7:** Advanced React hooks and custom hooks
-- **Week 8:** Building a full-stack app with backend
-- **Week 9:** Testing and debugging React apps
-- **Week 10:** Performance optimization
-- **Week 11:** Final project and deployment
+- **Week 7:** Tailwind CSS deeply, Bootstrap integration, final project polish
+- **Week 8:** Advanced React hooks and custom hooks
+- **Week 9:** Building a full-stack app with backend
+- **Week 10:** Testing and debugging React apps
+- **Week 11:** Performance optimization and final project
 
 My personal goal for this internship is to not just learn React, but to understand how to build real-world applications. I want to gain confidence in coding and maybe even contribute to some open-source projects. By the end, I hope to have a portfolio that shows my growth.
 
@@ -38,7 +38,7 @@ This is just the beginning of my journey. Stay tuned for more updates!
 | 4 | React Introduction | ✅ Done |
 | 5 | useState deeply, events, controlled inputs, lists | ✅ Done |
 | 6 | React Router, forms, useEffect, API fetching | ✅ Done |
-| 7 | Advanced React hooks | ⏳ Upcoming |
+| 7 | Tailwind CSS deeply, Bootstrap integration, final project polish | ✅ Done |
 | 8 | Full-stack app | ⏳ Upcoming |
 | 9 | Testing and debugging | ⏳ Upcoming |
 | 10 | Performance optimization | ⏳ Upcoming |
