@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import LoadingSpinner from '../components/ui/LoadingSpinner';
 import useDocumentTitle from '../hooks/useDocumentTitle';
+import Tag from '../components/ui/Tag';
 
 function PostsPage() {
   // Set document title
@@ -88,6 +89,17 @@ function PostsPage() {
   return (
     <div className="container my-5">
       <h1>Posts</h1>
+
+      {/* Filter tags */}
+      <div className="mb-4">
+        <div className="d-flex gap-2 flex-wrap">
+          <Tag variant="primary" size="sm">All Posts</Tag>
+          <Tag variant="secondary" size="sm">Recent</Tag>
+          <Tag variant="success" size="sm">Popular</Tag>
+          <Tag variant="info" size="sm">Technology</Tag>
+          <Tag variant="warning" size="sm">Lifestyle</Tag>
+        </div>
+      </div>
 
       {/* Search input */}
       <div className="mb-4">

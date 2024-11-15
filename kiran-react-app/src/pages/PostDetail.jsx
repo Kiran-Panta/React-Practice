@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import LoadingSpinner from '../components/ui/LoadingSpinner';
+import Breadcrumb from '../components/ui/Breadcrumb';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function PostDetail() {
@@ -50,9 +50,7 @@ function PostDetail() {
 
   return (
     <div className="container my-5">
-      <button className="btn btn-secondary mb-3" onClick={() => navigate(-1)}>
-        ← Back
-      </button>
+      <Breadcrumb />
       {post && (
         <div>
           <h1>{post.title}</h1>
