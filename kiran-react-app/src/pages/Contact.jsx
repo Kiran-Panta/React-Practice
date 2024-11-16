@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useToast } from '../hooks/useToast';
+import { validateRequired, validateEmail, validateMinLength, validateForm } from '../utils/validators';
 import './Contact.css'; // Custom styles for contact page
 import useDocumentTitle from '../hooks/useDocumentTitle';
 
@@ -41,39 +42,18 @@ const Contact = () => {
         }
     };
 
-    // Form validation function
+    // Form validation function using utility validators
     const validateForm = () => {
-        const newErrors = {};
+        const validations = {
+            name: validateMinLength(formData.name.trim(), 2, 'Name'),
+            email: validateEmail(formData.email.trim()),
+            subject: validateRequired(formData.subject.trim(), 'Subject'),
+            message: validateMinLength(formData.message.trim(), 10, 'Message')
+        };
 
-        // Name validation - required, minimum 2 characters
-        if (!formData.name.trim()) {
-            newErrors.name = 'Name is required';
-        } else if (formData.name.trim().length < 2) {
-            newErrors.name = 'Name must be at least 2 characters';
-        }
-
-        // Email validation - required, valid email format
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!formData.email.trim()) {
-            newErrors.email = 'Email is required';
-        } else if (!emailRegex.test(formData.email)) {
-            newErrors.email = 'Please enter a valid email address';
-        }
-
-        // Subject validation - required
-        if (!formData.subject.trim()) {
-            newErrors.subject = 'Subject is required';
-        }
-
-        // Message validation - required, minimum 10 characters
-        if (!formData.message.trim()) {
-            newErrors.message = 'Message is required';
-        } else if (formData.message.trim().length < 10) {
-            newErrors.message = 'Message must be at least 10 characters';
-        }
-
-        setErrors(newErrors);
-        return Object.keys(newErrors).length === 0;
+        const result = validateForm(validations);
+        setErrors(result.errors);
+        return result.isValid;
     };
 
     // Handle form submission

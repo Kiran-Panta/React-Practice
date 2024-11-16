@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Breadcrumb from '../components/ui/Breadcrumb';
+import { capitalize } from '../utils/helpers';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function PostDetail() {
@@ -53,7 +54,7 @@ function PostDetail() {
       <Breadcrumb />
       {post && (
         <div>
-          <h1>{post.title}</h1>
+          <h1>{capitalize(post.title)}</h1>
           <p className="text-muted">Post ID: {post.id}</p>
           <p>{post.body}</p>
         </div>

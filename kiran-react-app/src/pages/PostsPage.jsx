@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import LoadingSpinner from '../components/ui/LoadingSpinner';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 import Tag from '../components/ui/Tag';
+import { truncate } from '../utils/helpers';
 
 function PostsPage() {
   // Set document title
@@ -141,7 +142,7 @@ function PostsPage() {
               <div className="card h-100 hover:shadow-lg transition-shadow duration-300">
                 <div className="card-body">
                   <h5 className="card-title">{post.title}</h5>
-                  <p className="card-text">{post.body.substring(0, 100)}...</p>
+                  <p className="card-text">{truncate(post.body, 100)}</p>
                   {/* Link navigates to post detail page */}
                   <Link to={`/posts/${post.id}`} className="btn btn-primary">Read More</Link>
                 </div>
