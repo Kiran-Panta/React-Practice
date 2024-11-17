@@ -287,7 +287,6 @@ function useMemoExample() {
 
     // Expensive calculation - memoized
     const sum = useMemo(() => {
-        console.log('Calculating sum...');
         return numbers.reduce((acc, num) => acc + num, 0) * multiplier;
     }, [numbers, multiplier]);
 
