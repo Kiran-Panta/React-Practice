@@ -188,6 +188,73 @@ function Portfolio() {
         </div>
       </section>
 
+      {/* My Journey Section */}
+      <section className="py-5">
+        <div className="container">
+          <h2 className="text-center mb-5">My Journey</h2>
+          <div className="row">
+            <div className="col-md-10 mx-auto">
+              <div className="timeline">
+                <div className="timeline-item">
+                  <div className="timeline-marker bg-primary"></div>
+                  <div className="timeline-content">
+                    <h5 className="timeline-title">Week 1-3: Building Foundations</h5>
+                    <p className="timeline-text">
+                      Started with HTML, CSS, and JavaScript basics. Learned terminal commands, semantic HTML,
+                      CSS layouts, and JavaScript fundamentals including DOM manipulation and async programming.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="timeline-item">
+                  <div className="timeline-marker bg-success"></div>
+                  <div className="timeline-content">
+                    <h5 className="timeline-title">Week 4-6: React Core Concepts</h5>
+                    <p className="timeline-text">
+                      Mastered React components, JSX, state management with hooks, React Router for navigation,
+                      and API integration. Built my first interactive applications with proper error handling.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="timeline-item">
+                  <div className="timeline-marker bg-warning"></div>
+                  <div className="timeline-content">
+                    <h5 className="timeline-title">Week 7-8: UI/UX Excellence</h5>
+                    <p className="timeline-text">
+                      Deep dive into Tailwind CSS and Bootstrap. Created responsive, accessible interfaces
+                      with modern design principles and user experience best practices.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="timeline-item">
+                  <div className="timeline-marker bg-info"></div>
+                  <div className="timeline-content">
+                    <h5 className="timeline-title">Week 9-10: Advanced Features & Polish</h5>
+                    <p className="timeline-text">
+                      Developed custom hooks, utility functions, and comprehensive testing approaches.
+                      Focused on code quality, performance optimization, and production readiness.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="timeline-item">
+                  <div className="timeline-marker bg-secondary"></div>
+                  <div className="timeline-content">
+                    <h5 className="timeline-title">Key Achievements</h5>
+                    <p className="timeline-text">
+                      Built 5 complete React applications, implemented 15+ reusable components,
+                      mastered modern development workflows, and prepared for production deployment.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Internship Certificate Section */}
       <section className="py-5">
         <div className="container">
@@ -296,6 +363,90 @@ function Portfolio() {
           .gallery-grid {
             column-count: 1;
           }
+        }
+
+        /* Timeline styles */
+        .timeline {
+          position: relative;
+          padding-left: 30px;
+        }
+
+        .timeline::before {
+          content: '';
+          position: absolute;
+          left: 15px;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          background: linear-gradient(to bottom, #007bff, #28a745, #ffc107, #17a2b8, #6c757d);
+        }
+
+        .timeline-item {
+          position: relative;
+          margin-bottom: 2rem;
+        }
+
+        .timeline-marker {
+          position: absolute;
+          left: -22px;
+          top: 8px;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          border: 3px solid white;
+          box-shadow: 0 0 0 2px #dee2e6;
+        }
+
+        .timeline-content {
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          border-left: 4px solid #007bff;
+        }
+
+        .timeline-title {
+          color: #007bff;
+          margin-bottom: 0.5rem;
+          font-weight: 600;
+        }
+
+        .timeline-text {
+          color: #6c757d;
+          margin: 0;
+          line-height: 1.6;
+        }
+
+        .timeline-item:nth-child(2) .timeline-content {
+          border-left-color: #28a745;
+        }
+
+        .timeline-item:nth-child(2) .timeline-title {
+          color: #28a745;
+        }
+
+        .timeline-item:nth-child(3) .timeline-content {
+          border-left-color: #ffc107;
+        }
+
+        .timeline-item:nth-child(3) .timeline-title {
+          color: #ffc107;
+        }
+
+        .timeline-item:nth-child(4) .timeline-content {
+          border-left-color: #17a2b8;
+        }
+
+        .timeline-item:nth-child(4) .timeline-title {
+          color: #17a2b8;
+        }
+
+        .timeline-item:nth-child(5) .timeline-content {
+          border-left-color: #6c757d;
+        }
+
+        .timeline-item:nth-child(5) .timeline-title {
+          color: #6c757d;
         }
 
         .gallery-item {
