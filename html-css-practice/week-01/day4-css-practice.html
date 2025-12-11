@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Practice Blog</title>
+<style>
+/* CSS for styling the blog layout */
+
+/* Body: font-family Arial for readability, line-height 1.6 for spacing between lines */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f0f0f0, #ffffff); /* background gradient from light gray to white */
+}
+
+/* Header: text-decoration underline for emphasis, letter-spacing 2px for spacing between letters */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
+
+/* Main: display flex for layout, aside on right */
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Article: flex 3 for main content */
+article {
+    flex: 3;
+    padding-right: 20px;
+}
+
+/* H1: font-size large, color blue */
+h1 {
+    font-size: 2em;
+    color: #007bff;
+}
+
+/* H2: font-size medium, color green */
+h2 {
+    font-size: 1.5em;
+    color: #28a745;
+}
+
+/* P: normal paragraph */
+p {
+    margin-bottom: 15px;
+}
+
+/* Blockquote: border-left 5px solid for accent, italic for style */
+blockquote {
+    border-left: 5px solid #007bff;
+    padding-left: 15px;
+    font-style: italic;
+    color: #555;
+}
+
+/* Code: background light gray, color red for visibility */
+code {
+    background-color: #f4f4f4;
+    color: #d73a49;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* Aside: flex 1 for sidebar, background light blue */
+aside {
+    flex: 1;
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* H3 in aside */
+aside h3 {
+    margin-top: 0;
+}
+
+/* Footer for defense Q */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>My Tech Blog</h1>
+</header>
+
+<main>
+    <article>
+        <h1>Introduction to React</h1>
+        <h2>What is React?</h2>
+        <p>React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components.</p>
+        <blockquote>
+            "React makes it painless to create interactive UIs."
+        </blockquote>
+        <p>To create a component, use: <code>function MyComponent() { return &lt;div&gt;Hello&lt;/div&gt;; }</code></p>
+    </article>
+
+    <aside>
+        <h3>About Author</h3>
+        <p>Kiran Panta is a computer science student interning at Tech Yatra. Passionate about web development.</p>
+    </aside>
+</main>
+
+<footer>
+    <h3>Defense Question</h3>
+    <p><strong>CSS ma cascading bhanne ke ho?</strong> Cascading means styles can override each other based on specificity and order.</p>
+    <p><strong>Specificity kasari kaam garchha?</strong> Specificity is calculated based on selectors: inline > id > class > element. Higher specificity wins.</p>
+</footer>
+
+</body>
+</html>
