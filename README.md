@@ -26,5 +26,21 @@ My personal goal for this internship is to not just learn React, but to understa
 - **Version Control:** Git
 - **Package Manager:** npm
 
-This is just the beginning of my journey. Stay tuned for more updates!</content>
+This is just the beginning of my journey. Stay tuned for more updates!
+
+## Progress Tracker
+
+| Week | Topic | Status |
+|------|-------|--------|
+| 1 | Terminal basics, HTML, CSS | ✅ Done |
+| 2 | JavaScript basics | 🔄 In Progress |
+| 3 | Advanced JavaScript | ⏳ Upcoming |
+| 4 | React components and JSX | ⏳ Upcoming |
+| 5 | State management in React | ⏳ Upcoming |
+| 6 | React hooks and lifecycle | ⏳ Upcoming |
+| 7 | Routing with React Router | ⏳ Upcoming |
+| 8 | API integration | ⏳ Upcoming |
+| 9 | Full-stack app | ⏳ Upcoming |
+| 10 | Testing and debugging | ⏳ Upcoming |
+| 11 | Final project | ⏳ Upcoming |</content>
 <parameter name="filePath">d:\React-js(Practice)\README.md
