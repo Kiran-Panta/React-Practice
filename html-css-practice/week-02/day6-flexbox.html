@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flexbox Practice</title>
+<style>
+/* CSS for Flexbox practice */
+
+.container {
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 10px;
+}
+
+/* Flexbox row: display flex makes elements in a row */
+.row {
+    display: flex;
+    flex-direction: row; /* row means horizontal */
+}
+
+/* Flexbox column: flex-direction column makes vertical */
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Centered box: justify-content center aligns horizontally, align-items center vertically */
+.centered {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    height: 200px;
+}
+
+/* Navbar: space-between puts space between items */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* logo left, links right */
+    background: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Card row: gap adds space between cards */
+.card-row {
+    display: flex;
+    gap: 20px; /* space between cards */
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+
+.box:nth-child(2) { background: blue; }
+.box:nth-child(3) { background: green; }
+.box:nth-child(4) { background: yellow; }
+
+.card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+}
+</style>
+</head>
+<body>
+
+<h1>Flexbox Practice</h1>
+
+<!-- Flexbox row example -->
+<div class="container">
+    <h2>Row of 4 boxes</h2>
+    <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</div>
+
+<!-- Flexbox column example -->
+<div class="container">
+    <h2>Column of 4 boxes</h2>
+    <div class="column">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</div>
+
+<!-- Centered box -->
+<div class="container centered">
+    <div class="box" style="background: purple;"></div>
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div>Logo</div>
+    <div>Links</div>
+</div>
+
+<!-- Card row -->
+<div class="card-row">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+</div>
+
+<!-- Flexbox Cheatsheet
+display: flex; - makes container flex
+flex-direction: row/column; - direction of items
+justify-content: flex-start/center/flex-end/space-between/space-around; - horizontal alignment
+align-items: flex-start/center/flex-end/stretch; - vertical alignment
+gap: 10px; - space between items
+-->
+
+<h2>Defense Question</h2>
+<p><strong>Flexbox bhanne ke ho?</strong> Flexbox is a way to arrange items in a container easily, like making rows or columns without floats.</p>
+<p><strong>justify-content ra align-items ko difference ke ho?</strong> justify-content aligns items horizontally (left right), align-items aligns vertically (up down).</p>
+
+</body>
+</html>
