@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Grid Practice</title>
+<style>
+/* CSS Grid practice */
+
+/* Basic 3-column grid: grid-template-columns divides into 3 equal columns */
+.basic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 1fr means equal parts */
+    gap: 10px;
+}
+
+/* Photo gallery: equal cells */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* repeat 3 times 1fr */
+    grid-template-rows: repeat(2, 100px); /* 2 rows of 100px */
+    gap: 10px;
+}
+
+/* Magazine layout: one spans 2 columns */
+.magazine {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.article1 {
+    grid-column: span 2; /* spans 2 columns */
+}
+
+/* Dashboard: header full, sidebar main side, footer full */
+.dashboard {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* sidebar 200px, main rest */
+    grid-template-rows: auto 1fr auto; /* header auto, main 1fr, footer auto */
+    height: 100vh;
+}
+
+.header {
+    grid-column: 1 / -1; /* spans all columns */
+}
+
+.sidebar {
+    background: #f0f0f0;
+}
+
+.main {
+    background: #fff;
+}
+
+.footer {
+    grid-column: 1 / -1;
+    background: #333;
+    color: white;
+}
+
+.cell {
+    background: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Grid Practice</h1>
+
+<!-- Basic 3-column grid -->
+<div class="basic-grid">
+    <div class="cell">1</div>
+    <div class="cell">2</div>
+    <div class="cell">3</div>
+</div>
+
+<!-- Photo gallery -->
+<h2>Photo Gallery</h2>
+<div class="gallery">
+    <div class="cell">Photo 1</div>
+    <div class="cell">Photo 2</div>
+    <div class="cell">Photo 3</div>
+    <div class="cell">Photo 4</div>
+    <div class="cell">Photo 5</div>
+    <div class="cell">Photo 6</div>
+</div>
+
+<!-- Magazine layout -->
+<h2>Magazine Layout</h2>
+<div class="magazine">
+    <div class="cell article1">Main Article (spans 2)</div>
+    <div class="cell">Side Article</div>
+    <div class="cell">Ad</div>
+</div>
+
+<!-- Dashboard -->
+<h2>Dashboard Layout</h2>
+<div class="dashboard">
+    <div class="header cell">Header</div>
+    <div class="sidebar cell">Sidebar</div>
+    <div class="main cell">Main Content</div>
+    <div class="footer cell">Footer</div>
+</div>
+
+<!-- Comparison: Flexbox = 1D (row OR column), Grid = 2D (row AND column at same time) -->
+
+<h2>Defense Question</h2>
+<p><strong>CSS Grid ra Flexbox ko difference ke ho?</strong> Flexbox is for 1D layouts (either row or column), Grid is for 2D layouts (both rows and columns together).</p>
+<p><strong>Kuna use garne kuna situation ma?</strong> Use Flexbox for simple alignments like navbars or card rows. Use Grid for complex layouts like dashboards or magazines.</p>
+
+</body>
+</html>
