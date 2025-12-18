@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Card Components</title>
+<style>
+/* Card styles */
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px; /* rounded corners look modern */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* shadow for depth */
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.3s; /* smooth hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* lift on hover */
+}
+
+/* Info card */
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Pricing card */
+.pricing-card {
+    text-align: center;
+}
+
+.pricing-card .price {
+    font-size: 2em;
+    color: #007bff;
+}
+
+/* Profile card */
+.profile-card {
+    text-align: center;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+/* Blog card */
+.blog-card img {
+    width: 100%;
+    height: 150px;
+    background: #eee;
+}
+
+/* Stats card */
+.stats-card {
+    text-align: center;
+}
+
+.stats-number {
+    font-size: 3em;
+    color: green;
+}
+</style>
+</head>
+<body>
+
+<h1>Card Components</h1>
+
+<!-- Info Card -->
+<div class="card info-card">
+    <div>📱</div>
+    <div>
+        <h3>Info Card</h3>
+        <p>Some description here.</p>
+    </div>
+</div>
+
+<!-- Pricing Card -->
+<div class="card pricing-card">
+    <h3>Basic Plan</h3>
+    <div class="price">$10</div>
+    <ul>
+        <li>Feature 1</li>
+        <li>Feature 2</li>
+    </ul>
+    <button>Buy Now</button>
+</div>
+
+<!-- Profile Card -->
+<div class="card profile-card">
+    <div class="avatar"></div>
+    <h3>John Doe</h3>
+    <p>Bio here.</p>
+    <div>Social links</div>
+</div>
+
+<!-- Blog Card -->
+<div class="card blog-card">
+    <img src="placeholder.jpg" alt="Blog image">
+    <p>Dec 10, 2025</p>
+    <h3>Blog Title</h3>
+    <p>Excerpt...</p>
+    <a href="#">Read More</a>
+</div>
+
+<!-- Stats Card -->
+<div class="card stats-card">
+    <div class="stats-number">150</div>
+    <p>Users</p>
+    <span>↑ 10%</span>
+</div>
+
+</body>
+</html>
