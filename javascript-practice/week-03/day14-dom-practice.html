@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM Practice - Todo List</title>
+<style>
+body { font-family: Arial; margin: 20px; }
+input { padding: 10px; width: 200px; }
+button { padding: 10px; }
+ul { list-style: none; }
+li { padding: 5px; border-bottom: 1px solid #ccc; }
+.completed { text-decoration: line-through; }
+.filters { margin: 10px 0; }
+</style>
+</head>
+<body>
+
+<h1>Todo List</h1>
+<input type="text" id="taskInput" placeholder="Add new task">
+<button id="addBtn">Add Task</button>
+
+<div class="filters">
+    <button class="filter" data-filter="all">All</button>
+    <button class="filter" data-filter="active">Active</button>
+    <button class="filter" data-filter="completed">Completed</button>
+    <button id="clearCompleted">Clear Completed</button>
+</div>
+
+<p id="count">0 items left</p>
+
+<ul id="todoList"></ul>
+
+<script>
+// DOM manipulation practice
+
+const taskInput = document.getElementById('taskInput');
+const addBtn = document.getElementById('addBtn');
+const todoList = document.getElementById('todoList');
+const countEl = document.getElementById('count');
+const clearBtn = document.getElementById('clearCompleted');
+const filters = document.querySelectorAll('.filter');
+
+let todos = JSON.parse(localStorage.getItem('todos')) || []; // load from localStorage
+
+function render() {
+    todoList.innerHTML = ''; // clear list
+    let filtered = todos;
+    const currentFilter = document.querySelector('.filter.active')?.dataset.filter || 'all';
+    
+    if (currentFilter === 'active') filtered = todos.filter(t => !t.completed);
+    if (currentFilter === 'completed') filtered = todos.filter(t => t.completed);
+    
+    filtered.forEach((todo, index) => {
+        const li = document.createElement('li'); // createElement safer than innerHTML
+        li.className = todo.completed ? 'completed' : '';
+        li.innerHTML = `
+            <span>${todo.text}</span>
+            <button class="delete" data-index="${index}">Delete</button>
+            <button class="toggle" data-index="${index}">${todo.completed ? 'Undo' : 'Complete'}</button>
+        `;
+        todoList.appendChild(li);
+    });
+    
+    updateCount();
+    saveToLocalStorage();
+}
+
+function addTask() {
+    const text = taskInput.value.trim();
+    if (text) {
+        todos.push({text, completed: false});
+        taskInput.value = '';
+        render();
+    }
+}
+
+function deleteTask(index) {
+    todos.splice(index, 1);
+    render();
+}
+
+function toggleComplete(index) {
+    todos[index].completed = !todos[index].completed;
+    render();
+}
+
+function updateCount() {
+    const active = todos.filter(t => !t.completed).length;
+    countEl.textContent = `${active} items left`;
+}
+
+function saveToLocalStorage() {
+    localStorage.setItem('todos', JSON.stringify(todos)); // setItem saves, stringify for objects
+}
+
+function clearCompleted() {
+    todos = todos.filter(t => !t.completed);
+    render();
+}
+
+// Event listeners
+addBtn.addEventListener('click', addTask);
+taskInput.addEventListener('keypress', e => {
+    if (e.key === 'Enter') addTask();
+});
+
+// Event delegation: one listener on parent instead of each item
+todoList.addEventListener('click', e => {
+    if (e.target.classList.contains('delete')) {
+        deleteTask(e.target.dataset.index);
+    } else if (e.target.classList.contains('toggle')) {
+        toggleComplete(e.target.dataset.index);
+    }
+});
+
+filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelector('.filter.active')?.classList.remove('active');
+        btn.classList.add('active');
+        render();
+    });
+});
+
+clearBtn.addEventListener('click', clearCompleted);
+
+// Initial render
+render();
+</script>
+
+</body>
+</html>
