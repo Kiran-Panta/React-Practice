@@ -34,8 +34,8 @@ This is just the beginning of my journey. Stay tuned for more updates!
 |------|-------|--------|
 | 1 | Terminal basics, HTML, CSS | ✅ Done |
 | 2 | CSS Flexbox, Grid, Responsive Design | ✅ Done |
-| 3 | JavaScript basics | 🔄 In Progress |
-| 4 | Advanced JavaScript | ⏳ Upcoming |
+| 3 | JavaScript Fundamentals | ✅ Done |
+| 4 | Advanced JavaScript | 🔄 In Progress |
 | 5 | React components and JSX | ⏳ Upcoming |
 | 6 | State management in React | ⏳ Upcoming |
 | 7 | Routing with React Router | ⏳ Upcoming |
