@@ -1,60 +1,18 @@
 // import statements bring in React functions and components
 import { useState } from 'react' // useState is hook for state management
-import ProfileCard from './components/ProfileCard'
-import StatCard from './components/StatCard'
-import SkillTag from './components/SkillTag'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import Footer from './components/Footer'
 
 // JSX looks like HTML but is JavaScript - Babel converts it
 function App() {
   // export default means this is the main component to export
   return (
     // JSX must have one root element (or Fragment)
-    <div className="container">
-      <h1>Namaste! Ma Kiran Panta hun — React Intern at Tech Yatra</h1>
-      
-      <div className="row">
-        <div className="col-md-6">
-          <ProfileCard 
-            name="Kiran Panta" 
-            role="React Intern" 
-            company="Tech Yatra" 
-            bio="Learning React and web development." 
-            skills={["React", "JS", "HTML"]} 
-          />
-        </div>
-        <div className="col-md-6">
-          <ProfileCard 
-            name="John Doe" 
-            role="Senior Dev" 
-            company="Tech Corp" 
-            bio="Experienced developer." 
-            skills={["Node", "Python", "AWS"]} 
-          />
-        </div>
-      </div>
-      
-      <div className="row">
-        <div className="col-md-3">
-          <StatCard icon="✅" number="15" label="Days Completed" />
-        </div>
-        <div className="col-md-3">
-          <StatCard icon="🧩" number="10" label="Components Built" />
-        </div>
-        <div className="col-md-3">
-          <StatCard icon="📚" number="50" label="Concepts Learned" />
-        </div>
-        <div className="col-md-3">
-          <StatCard icon="⏰" number="80" label="Hours Practiced" />
-        </div>
-      </div>
-      
-      <div>
-        <SkillTag skill="React" type="tech" />
-        <SkillTag skill="Communication" type="soft" />
-        <SkillTag skill="Problem Solving" type="soft" />
-        <SkillTag skill="CSS" type="tech" />
-        <SkillTag skill="JavaScript" type="tech" />
-      </div>
+    <div className="d-flex flex-column min-vh-100">
+      <Navbar />
+      <Home />
+      <Footer />
     </div>
   )
 }
