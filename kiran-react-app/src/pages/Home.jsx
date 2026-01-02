@@ -1,11 +1,36 @@
 import ProfileCard from '../components/ProfileCard';
 import StatCard from '../components/StatCard';
 import SkillTag from '../components/SkillTag';
+import Counter from '../components/Counter';
+import ToggleCard from '../components/ToggleCard';
 
 function Home() {
   return (
     <main className="container my-4">
       <h1>Namaste! Ma Kiran Panta hun — React Intern at Tech Yatra</h1>
+      
+      <Counter />
+      
+      <div className="row">
+        <div className="col-md-4">
+          <ToggleCard 
+            question="What is JSX?" 
+            answer="JSX is syntax that looks like HTML but is JavaScript. Babel converts it to React.createElement." 
+          />
+        </div>
+        <div className="col-md-4">
+          <ToggleCard 
+            question="What is a component?" 
+            answer="A reusable piece of UI, like a function that returns JSX." 
+          />
+        </div>
+        <div className="col-md-4">
+          <ToggleCard 
+            question="What is useState?" 
+            answer="A hook to add state to functional components. Returns [state, setter]." 
+          />
+        </div>
+      </div>
       
       <div className="row">
         <div className="col-md-6">
