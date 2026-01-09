@@ -36,8 +36,8 @@ This is just the beginning of my journey. Stay tuned for more updates!
 | 2 | CSS Flexbox, Grid, Responsive Design | ✅ Done |
 | 3 | JavaScript Fundamentals | ✅ Done |
 | 4 | React Introduction | ✅ Done |
-| 5 | Advanced JavaScript | 🔄 In Progress |
-| 6 | React components and JSX | ⏳ Upcoming |
+| 5 | useState deeply, events, controlled inputs, lists | ✅ Done |
+| 6 | Advanced JavaScript | 🔄 In Progress |
 | 7 | Routing with React Router | ⏳ Upcoming |
 | 8 | API integration | ⏳ Upcoming |
 | 9 | Full-stack app | ⏳ Upcoming |
