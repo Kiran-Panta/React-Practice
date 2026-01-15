@@ -3,6 +3,7 @@ import StatCard from '../components/StatCard';
 import SkillTag from '../components/SkillTag';
 import Counter from '../components/Counter';
 import ToggleCard from '../components/ToggleCard';
+import WeatherWidget from '../components/features/WeatherWidget';
 
 function Home() {
   return (
@@ -65,6 +66,12 @@ function Home() {
         </div>
         <div className="col-md-3">
           <StatCard icon="⏰" number="80" label="Hours Practiced" />
+        </div>
+      </div>
+      
+      <div className="row my-4">
+        <div className="col-md-6">
+          <WeatherWidget />
         </div>
       </div>
       
