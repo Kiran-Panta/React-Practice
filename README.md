@@ -11,11 +11,11 @@ The internship is structured into 11 weeks, each focusing on different aspects o
 - **Week 3:** Advanced JavaScript concepts like closures and async programming
 - **Week 4:** Introduction to React components and JSX
 - **Week 5:** State management in React
-- **Week 6:** React hooks and lifecycle methods
-- **Week 7:** Routing with React Router
-- **Week 8:** API integration and data fetching
-- **Week 9:** Building a full-stack app with backend
-- **Week 10:** Testing and debugging React apps
+- **Week 6:** React Router, forms with validation, useEffect, API fetching
+- **Week 7:** Advanced React hooks and custom hooks
+- **Week 8:** Building a full-stack app with backend
+- **Week 9:** Testing and debugging React apps
+- **Week 10:** Performance optimization
 - **Week 11:** Final project and deployment
 
 My personal goal for this internship is to not just learn React, but to understand how to build real-world applications. I want to gain confidence in coding and maybe even contribute to some open-source projects. By the end, I hope to have a portfolio that shows my growth.
@@ -37,10 +37,10 @@ This is just the beginning of my journey. Stay tuned for more updates!
 | 3 | JavaScript Fundamentals | ✅ Done |
 | 4 | React Introduction | ✅ Done |
 | 5 | useState deeply, events, controlled inputs, lists | ✅ Done |
-| 6 | Advanced JavaScript | 🔄 In Progress |
-| 7 | Routing with React Router | ⏳ Upcoming |
-| 8 | API integration | ⏳ Upcoming |
-| 9 | Full-stack app | ⏳ Upcoming |
-| 10 | Testing and debugging | ⏳ Upcoming |
+| 6 | React Router, forms, useEffect, API fetching | ✅ Done |
+| 7 | Advanced React hooks | ⏳ Upcoming |
+| 8 | Full-stack app | ⏳ Upcoming |
+| 9 | Testing and debugging | ⏳ Upcoming |
+| 10 | Performance optimization | ⏳ Upcoming |
 | 11 | Final project | ⏳ Upcoming |</content>
 <parameter name="filePath">d:\React-js(Practice)\README.md
