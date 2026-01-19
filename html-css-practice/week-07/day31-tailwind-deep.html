@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Deep Practice - Kiran Panta</title>
+    <!-- Tailwind Play CDN for standalone practice -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+    <h1 class="text-4xl font-bold text-center mb-8">Tailwind CSS Deep Practice</h1>
+
+    <!-- Color Palette Showcase -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Color Palette (Gray Scale)</h2>
+        <div class="grid grid-cols-5 gap-4">
+            <div class="bg-gray-50 p-4 text-center text-gray-900">gray-50<br/>#f9fafb</div>
+            <div class="bg-gray-100 p-4 text-center text-gray-900">gray-100<br/>#f3f4f6</div>
+            <div class="bg-gray-200 p-4 text-center text-gray-900">gray-200<br/>#e5e7eb</div>
+            <div class="bg-gray-300 p-4 text-center text-gray-900">gray-300<br/>#d1d5db</div>
+            <div class="bg-gray-400 p-4 text-center text-gray-900">gray-400<br/>#9ca3af</div>
+            <div class="bg-gray-500 p-4 text-center text-gray-900">gray-500<br/>#6b7280</div>
+            <div class="bg-gray-600 p-4 text-center text-gray-900">gray-600<br/>#4b5563</div>
+            <div class="bg-gray-700 p-4 text-center text-gray-900">gray-700<br/>#374151</div>
+            <div class="bg-gray-800 p-4 text-center text-gray-900">gray-800<br/>#1f2937</div>
+            <div class="bg-gray-900 p-4 text-center text-gray-900">gray-900<br/>#111827</div>
+        </div>
+    </section>
+
+    <!-- Spacing Visualizer -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Spacing Scale (Padding)</h2>
+        <div class="space-y-4">
+            <div class="bg-blue-100 p-1 border">p-1 (0.25rem)</div>
+            <div class="bg-blue-100 p-2 border">p-2 (0.5rem)</div>
+            <div class="bg-blue-100 p-3 border">p-3 (0.75rem)</div>
+            <div class="bg-blue-100 p-4 border">p-4 (1rem)</div>
+            <div class="bg-blue-100 p-6 border">p-6 (1.5rem)</div>
+            <div class="bg-blue-100 p-8 border">p-8 (2rem)</div>
+            <div class="bg-blue-100 p-12 border">p-12 (3rem)</div>
+            <div class="bg-blue-100 p-16 border">p-16 (4rem)</div>
+        </div>
+    </section>
+
+    <!-- Typography Scale -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Typography Scale</h2>
+        <div class="space-y-4">
+            <p class="text-xs">text-xs (0.75rem) - Extra small text</p>
+            <p class="text-sm">text-sm (0.875rem) - Small text</p>
+            <p class="text-base">text-base (1rem) - Base text</p>
+            <p class="text-lg">text-lg (1.125rem) - Large text</p>
+            <p class="text-xl">text-xl (1.25rem) - Extra large text</p>
+            <p class="text-2xl">text-2xl (1.5rem) - 2XL text</p>
+            <p class="text-3xl">text-3xl (1.875rem) - 3XL text</p>
+            <p class="text-4xl">text-4xl (2.25rem) - 4XL text</p>
+            <p class="text-5xl">text-5xl (3rem) - 5XL text</p>
+            <p class="text-6xl">text-6xl (3.75rem) - 6XL text</p>
+        </div>
+        <div class="mt-8 space-y-2">
+            <p class="font-light">font-light (300)</p>
+            <p class="font-normal">font-normal (400)</p>
+            <p class="font-medium">font-medium (500)</p>
+            <p class="font-semibold">font-semibold (600)</p>
+            <p class="font-bold">font-bold (700)</p>
+            <p class="font-extrabold">font-extrabold (800)</p>
+        </div>
+    </section>
+
+    <!-- Complete Card -->
+    <section>
+        <h2 class="text-2xl font-semibold mb-4">Complete Card (Tailwind Only)</h2>
+        <div class="max-w-sm mx-auto bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 rounded-xl shadow-2xl hover:scale-105 transition-transform duration-300 focus:ring-4 focus:ring-purple-300 ring-offset-2">
+            <div class="p-6">
+                <h3 class="text-white text-xl font-bold mb-2">Amazing Card</h3>
+                <p class="text-purple-100 mb-4">This card is built entirely with Tailwind utilities. No custom CSS needed!</p>
+                <button class="bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Defense Question -->
+    <div class="mt-12 p-6 bg-yellow-100 rounded-lg">
+        <strong>Defense Q: Tailwind CSS ra Bootstrap ko main difference ke ho? Kuna project ma kuna use garchau?</strong>
+        <p>Tailwind is utility-first - you build with small classes like p-4, bg-blue-500. Bootstrap is component-first - you use pre-built components like btn-primary. Tailwind gives more control but requires more knowledge. Bootstrap is faster for quick prototypes. I use Tailwind for custom designs, Bootstrap for admin dashboards.</p>
+    </div>
+</body>
+</html>
