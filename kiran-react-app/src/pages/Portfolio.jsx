@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 function Portfolio() {
+  const skillsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const bars = entry.target.querySelectorAll('.progress-bar');
+            bars.forEach((bar, index) => {
+              setTimeout(() => {
+                bar.style.width = bar.textContent;
+              }, index * 200);
+            });
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (skillsRef.current) {
+      observer.observe(skillsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <div className="portfolio">
       {/* Hero Section */}
@@ -23,7 +48,7 @@ function Portfolio() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-5 bg-light">
+      <section ref={skillsRef} className="py-5 bg-light">
         <div className="container">
           <h2 className="text-center mb-5">Skills & Expertise</h2>
           <div className="row">
@@ -32,19 +57,19 @@ function Portfolio() {
               <div className="skill-item mb-3">
                 <span>React</span>
                 <div className="progress">
-                  <div className="progress-bar bg-primary" style={{width: '70%', animation: 'fillBar 2s ease-in-out'}}>70%</div>
+                  <div className="progress-bar bg-primary" style={{width: '0%', transition: 'width 1s ease-in-out'}}>70%</div>
                 </div>
               </div>
               <div className="skill-item mb-3">
                 <span>JavaScript</span>
                 <div className="progress">
-                  <div className="progress-bar bg-warning" style={{width: '75%', animation: 'fillBar 2s ease-in-out 0.2s'}}>75%</div>
+                  <div className="progress-bar bg-warning" style={{width: '0%', transition: 'width 1s ease-in-out'}}>75%</div>
                 </div>
               </div>
               <div className="skill-item mb-3">
                 <span>HTML/CSS</span>
                 <div className="progress">
-                  <div className="progress-bar bg-success" style={{width: '85%', animation: 'fillBar 2s ease-in-out 0.4s'}}>85%</div>
+                  <div className="progress-bar bg-success" style={{width: '0%', transition: 'width 1s ease-in-out'}}>85%</div>
                 </div>
               </div>
             </div>
@@ -53,19 +78,19 @@ function Portfolio() {
               <div className="skill-item mb-3">
                 <span>Problem Solving</span>
                 <div className="progress">
-                  <div className="progress-bar bg-info" style={{width: '80%', animation: 'fillBar 2s ease-in-out 0.6s'}}>80%</div>
+                  <div className="progress-bar bg-info" style={{width: '0%', transition: 'width 1s ease-in-out'}}>80%</div>
                 </div>
               </div>
               <div className="skill-item mb-3">
                 <span>Communication</span>
                 <div className="progress">
-                  <div className="progress-bar bg-secondary" style={{width: '75%', animation: 'fillBar 2s ease-in-out 0.8s'}}>75%</div>
+                  <div className="progress-bar bg-secondary" style={{width: '0%', transition: 'width 1s ease-in-out'}}>75%</div>
                 </div>
               </div>
               <div className="skill-item mb-3">
                 <span>Team Work</span>
                 <div className="progress">
-                  <div className="progress-bar bg-dark" style={{width: '85%', animation: 'fillBar 2s ease-in-out 1s'}}>85%</div>
+                  <div className="progress-bar bg-dark" style={{width: '0%', transition: 'width 1s ease-in-out'}}>85%</div>
                 </div>
               </div>
             </div>

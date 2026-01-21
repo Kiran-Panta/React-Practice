@@ -118,25 +118,28 @@ function TodoApp() {
           </p>
         ) : (
           filteredTodos.map(todo => (
-            <div key={todo.id} className="flex items-center p-2 border rounded">
+            <div key={todo.id} className="flex items-center p-3 border rounded-lg hover:shadow-md transition-all duration-200 group">
               <input
                 type="checkbox"
                 checked={todo.completed}
                 onChange={() => toggleComplete(todo.id)}
-                className="mr-2"
+                className="mr-3 w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 transition-all duration-200"
               />
-              <span className={`flex-1 ${todo.completed ? 'line-through text-gray-500' : ''}`}>
+              <span className={`flex-1 ${todo.completed ? 'line-through text-gray-500' : ''} transition-all duration-200`}>
                 {todo.text}
               </span>
-              <span className={`px-2 py-1 text-xs text-white rounded ml-2 ${getPriorityColor(todo.priority)}`}>
+              <span className={`px-2 py-1 text-xs text-white rounded-full ml-2 font-medium ${getPriorityColor(todo.priority)}`}>
                 {todo.priority}
               </span>
               <button
-                className="ml-2 text-red-500 hover:text-red-700"
+                className="ml-2 text-red-500 hover:text-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
                 onClick={() => deleteTodo(todo.id)}
               >
                 ✕
               </button>
+              <div className="ml-2 text-gray-400 cursor-move opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                ⋮⋮
+              </div>
             </div>
           ))
         )}
