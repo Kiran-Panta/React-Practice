@@ -27,6 +27,9 @@ function Navbar() {
               <Link className={`nav-link relative transition-all duration-300 hover:text-blue-400 ${location.pathname === '/about' ? 'text-blue-400 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-400 after:transform after:scale-x-100' : 'after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-400 after:transform after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100'}`} to="/about">About</Link>
             </li>
             <li className="nav-item">
+              <Link className={`nav-link relative transition-all duration-300 hover:text-blue-400 ${location.pathname === '/contact' ? 'text-blue-400 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-400 after:transform after:scale-x-100' : 'after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-400 after:transform after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100'}`} to="/contact">Contact</Link>
+            </li>
+            <li className="nav-item">
               <Link className={`nav-link relative transition-all duration-300 hover:text-blue-400 ${location.pathname === '/portfolio' ? 'text-blue-400 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-400 after:transform after:scale-x-100' : 'after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-400 after:transform after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100'}`} to="/portfolio">Portfolio</Link>
             </li>
           </ul>

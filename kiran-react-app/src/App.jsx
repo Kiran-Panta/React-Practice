@@ -8,6 +8,7 @@ import About from './pages/About'
 import PostsPage from './pages/PostsPage'
 import PostDetail from './pages/PostDetail'
 import Portfolio from './pages/Portfolio'
+import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import Footer from './components/Footer'
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/todo" element={<TodoApp />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/posts" element={<PostsPage />} />
           <Route path="/posts/:id" element={<PostDetail />} />
           <Route path="/portfolio" element={<Portfolio />} />

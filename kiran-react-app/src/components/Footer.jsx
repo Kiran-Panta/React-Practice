@@ -1,3 +1,5 @@
+import NewsletterSignup from './features/NewsletterSignup';
+
 function Footer() {
   return (
     <footer className="bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white mt-auto font-inter">
@@ -30,6 +32,12 @@ function Footer() {
             </div>
           </div>
         </div>
+
+        {/* Newsletter Signup Section */}
+        <div className="py-4">
+          <NewsletterSignup />
+        </div>
+
         <hr className="my-6 border-gray-700" />
         <div className="text-center text-gray-400">
           <p>&copy; 2026 Kiran Panta - Tech Yatra Private Limited. All rights reserved.</p>
