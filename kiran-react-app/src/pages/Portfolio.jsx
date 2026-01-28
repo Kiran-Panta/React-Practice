@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import ImageGallery from '../components/features/ImageGallery';
 
 function Portfolio() {
   const skillsRef = useRef(null);
@@ -149,6 +150,13 @@ function Portfolio() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section className="py-5 bg-light">
+        <div className="container">
+          <ImageGallery />
+        </div>
+      </section>
+
       {/* Internship Section */}
       <section className="py-5 bg-light">
         <div className="container">
@@ -208,6 +216,36 @@ function Portfolio() {
         .skill-item .progress-bar {
           --final-width: attr(style, width);
         }
+
+        /* Gallery grid styles - CSS columns for masonry layout */
+        .gallery-grid {
+          column-count: 3;
+          column-gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+          .gallery-grid {
+            column-count: 2;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .gallery-grid {
+            column-count: 1;
+          }
+        }
+
+        .gallery-item {
+          display: inline-block;
+          width: 100%;
+        }
+
+        /* Defense Q: Keyboard accessibility bhanne ke ho? React ma kasari implement garchau?
+        Answer: Keyboard accessibility means users can navigate and interact with app using only keyboard,
+        no mouse needed. Important for users with motor disabilities, screen readers, etc.
+        In React: use onKeyDown handlers, manage focus with useRef, add proper ARIA labels,
+        ensure tab order is logical, trap focus in modals, handle Enter/Space for buttons.
+        CSS columns are simpler than grid for masonry (irregular heights) but less control over exact positioning. */
       `}</style>
     </div>
   );
