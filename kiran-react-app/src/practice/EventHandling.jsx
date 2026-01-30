@@ -9,7 +9,7 @@ function EventHandling() {
 
   // onClick with parameters: use arrow function
   const handleClickWithParam = (param) => {
-    console.log('Clicked with param:', param);
+    // Log removed for production
   };
 
   // onSubmit: prevent default

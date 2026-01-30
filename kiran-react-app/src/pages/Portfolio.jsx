@@ -1,8 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import ImageGallery from '../components/features/ImageGallery';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function Portfolio() {
+  // Set document title
+  useDocumentTitle('Portfolio - Kiran Panta | React Intern');
+
   const skillsRef = useRef(null);
 
   useEffect(() => {
@@ -173,6 +177,61 @@ function Portfolio() {
                     During my internship, I learned modern web development practices, built multiple React applications,
                     and gained experience with version control, API integration, and responsive design.
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Internship Certificate Section */}
+      <section className="py-5">
+        <div className="container">
+          <h2 className="text-center mb-5">Internship Certificate</h2>
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <div className="card shadow-lg border-0" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white'}}>
+                <div className="card-body p-5 text-center">
+                  <div className="mb-4">
+                    <h3 className="display-6 fw-bold mb-3">Certificate of Completion</h3>
+                    <div className="border-bottom border-white opacity-50 mb-4"></div>
+                  </div>
+
+                  <div className="mb-4">
+                    <p className="lead mb-2">This is to certify that</p>
+                    <h4 className="display-5 fw-bold mb-3">Kiran Panta</h4>
+                    <p className="lead mb-4">has successfully completed</p>
+                  </div>
+
+                  <div className="mb-4">
+                    <h5 className="fw-bold mb-3">React Web Development Internship</h5>
+                    <p className="mb-2">at</p>
+                    <h5 className="fw-bold">Tech Yatra Private Limited</h5>
+                  </div>
+
+                  <div className="row text-center mb-4">
+                    <div className="col-md-6">
+                      <p className="mb-1"><strong>Start Date:</strong></p>
+                      <p>December 8, 2025</p>
+                    </div>
+                    <div className="col-md-6">
+                      <p className="mb-1"><strong>End Date:</strong></p>
+                      <p>February 19, 2026</p>
+                    </div>
+                  </div>
+
+                  <div className="border-top border-white opacity-50 pt-4 mt-4">
+                    <div className="row">
+                      <div className="col-md-6">
+                        <p className="mb-1"><strong>Supervisor:</strong></p>
+                        <p>Senior React Developer</p>
+                      </div>
+                      <div className="col-md-6">
+                        <p className="mb-1"><strong>Signature:</strong></p>
+                        <div className="border-bottom border-white d-inline-block" style={{width: '150px'}}></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

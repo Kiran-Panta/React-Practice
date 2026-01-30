@@ -1,6 +1,10 @@
 import React from 'react';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function About() {
+  // Set document title
+  useDocumentTitle('About - Kiran Panta | React Intern');
+
   return (
     <div className="container my-5">
       {/* h1 for main heading */}

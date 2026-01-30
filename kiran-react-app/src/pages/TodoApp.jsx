@@ -1,6 +1,10 @@
 import { useState } from 'react';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function TodoApp() {
+  // Set document title
+  useDocumentTitle('Todo App - Kiran Panta | React Intern');
+
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [filter, setFilter] = useState('all');
