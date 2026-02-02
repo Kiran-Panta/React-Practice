@@ -5,6 +5,8 @@ import SkillTag from '../components/SkillTag';
 import Counter from '../components/Counter';
 import ToggleCard from '../components/ToggleCard';
 import WeatherWidget from '../components/features/WeatherWidget';
+import QuoteWidget from '../components/features/QuoteWidget';
+import CountdownTimer from '../components/features/CountdownTimer';
 import ScrollToTop from '../components/ui/ScrollToTop';
 import Toast from '../components/ui/Toast';
 import { useToast } from '../hooks/useToast';
@@ -94,6 +96,19 @@ function Home() {
             <WeatherWidget />
           </div>
         </div>
+
+        {/* Motivation Section */}
+        <section className="my-5">
+          <h2 className="text-center mb-4">Stay Motivated</h2>
+          <div className="row">
+            <div className="col-md-6 mb-4">
+              <QuoteWidget />
+            </div>
+            <div className="col-md-6 mb-4">
+              <CountdownTimer />
+            </div>
+          </div>
+        </section>
 
         {/* Tech Stack Section */}
         <section className="my-5">
