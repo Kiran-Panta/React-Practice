@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { useToast } from '../hooks/useToast';
 import './Contact.css'; // Custom styles for contact page
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const Contact = () => {
+    // Set document title
+    useDocumentTitle('Contact - Kiran Panta | React Intern');
+
     // Form state management for contact form
     const [formData, setFormData] = useState({
         name: '',

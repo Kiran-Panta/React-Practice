@@ -16,10 +16,14 @@ function Portfolio() {
           if (entry.isIntersecting) {
             const bars = entry.target.querySelectorAll('.progress-bar');
             bars.forEach((bar, index) => {
+              // Get the target width from data attribute
+              const targetWidth = bar.getAttribute('data-width');
               setTimeout(() => {
-                bar.style.width = bar.textContent;
+                bar.style.width = targetWidth;
               }, index * 200);
             });
+            // Disconnect after animation to prevent re-triggering
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -62,19 +66,19 @@ function Portfolio() {
               <div className="skill-item mb-3">
                 <span>React</span>
                 <div className="progress">
-                  <div className="progress-bar bg-primary" style={{width: '0%', transition: 'width 1s ease-in-out'}}>70%</div>
+                  <div className="progress-bar bg-primary" data-width="70%" style={{width: '0%', transition: 'width 1s ease-in-out'}}>70%</div>
                 </div>
               </div>
               <div className="skill-item mb-3">
                 <span>JavaScript</span>
                 <div className="progress">
-                  <div className="progress-bar bg-warning" style={{width: '0%', transition: 'width 1s ease-in-out'}}>75%</div>
+                  <div className="progress-bar bg-warning" data-width="75%" style={{width: '0%', transition: 'width 1s ease-in-out'}}>75%</div>
                 </div>
               </div>
               <div className="skill-item mb-3">
                 <span>HTML/CSS</span>
                 <div className="progress">
-                  <div className="progress-bar bg-success" style={{width: '0%', transition: 'width 1s ease-in-out'}}>85%</div>
+                  <div className="progress-bar bg-success" data-width="85%" style={{width: '0%', transition: 'width 1s ease-in-out'}}>85%</div>
                 </div>
               </div>
             </div>
@@ -83,19 +87,19 @@ function Portfolio() {
               <div className="skill-item mb-3">
                 <span>Problem Solving</span>
                 <div className="progress">
-                  <div className="progress-bar bg-info" style={{width: '0%', transition: 'width 1s ease-in-out'}}>80%</div>
+                  <div className="progress-bar bg-info" data-width="80%" style={{width: '0%', transition: 'width 1s ease-in-out'}}>80%</div>
                 </div>
               </div>
               <div className="skill-item mb-3">
                 <span>Communication</span>
                 <div className="progress">
-                  <div className="progress-bar bg-secondary" style={{width: '0%', transition: 'width 1s ease-in-out'}}>75%</div>
+                  <div className="progress-bar bg-secondary" data-width="75%" style={{width: '0%', transition: 'width 1s ease-in-out'}}>75%</div>
                 </div>
               </div>
               <div className="skill-item mb-3">
                 <span>Team Work</span>
                 <div className="progress">
-                  <div className="progress-bar bg-dark" style={{width: '0%', transition: 'width 1s ease-in-out'}}>85%</div>
+                  <div className="progress-bar bg-dark" data-width="85%" style={{width: '0%', transition: 'width 1s ease-in-out'}}>85%</div>
                 </div>
               </div>
             </div>
@@ -189,46 +193,46 @@ function Portfolio() {
         <div className="container">
           <h2 className="text-center mb-5">Internship Certificate</h2>
           <div className="row justify-content-center">
-            <div className="col-lg-8">
+            <div className="col-12 col-lg-10 col-xl-8">
               <div className="card shadow-lg border-0" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white'}}>
-                <div className="card-body p-5 text-center">
+                <div className="card-body p-4 p-md-5 text-center">
                   <div className="mb-4">
-                    <h3 className="display-6 fw-bold mb-3">Certificate of Completion</h3>
+                    <h3 className="display-6 fw-bold mb-3" style={{fontSize: 'clamp(1.5rem, 4vw, 2.5rem)'}}>Certificate of Completion</h3>
                     <div className="border-bottom border-white opacity-50 mb-4"></div>
                   </div>
 
                   <div className="mb-4">
-                    <p className="lead mb-2">This is to certify that</p>
-                    <h4 className="display-5 fw-bold mb-3">Kiran Panta</h4>
-                    <p className="lead mb-4">has successfully completed</p>
+                    <p className="lead mb-2" style={{fontSize: 'clamp(0.9rem, 2.5vw, 1.25rem)'}}>This is to certify that</p>
+                    <h4 className="display-5 fw-bold mb-3" style={{fontSize: 'clamp(1.8rem, 5vw, 3rem)'}}>Kiran Panta</h4>
+                    <p className="lead mb-4" style={{fontSize: 'clamp(0.9rem, 2.5vw, 1.25rem)'}}>has successfully completed</p>
                   </div>
 
                   <div className="mb-4">
-                    <h5 className="fw-bold mb-3">React Web Development Internship</h5>
-                    <p className="mb-2">at</p>
-                    <h5 className="fw-bold">Tech Yatra Private Limited</h5>
+                    <h5 className="fw-bold mb-3" style={{fontSize: 'clamp(1.1rem, 3vw, 1.5rem)'}}>React Web Development Internship</h5>
+                    <p className="mb-2" style={{fontSize: 'clamp(0.9rem, 2.5vw, 1.25rem)'}}>at</p>
+                    <h5 className="fw-bold" style={{fontSize: 'clamp(1.1rem, 3vw, 1.5rem)'}}>Tech Yatra Private Limited</h5>
                   </div>
 
                   <div className="row text-center mb-4">
-                    <div className="col-md-6">
-                      <p className="mb-1"><strong>Start Date:</strong></p>
-                      <p>December 8, 2025</p>
+                    <div className="col-6 col-md-6">
+                      <p className="mb-1 fw-bold" style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>Start Date:</p>
+                      <p style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>December 8, 2025</p>
                     </div>
-                    <div className="col-md-6">
-                      <p className="mb-1"><strong>End Date:</strong></p>
-                      <p>February 19, 2026</p>
+                    <div className="col-6 col-md-6">
+                      <p className="mb-1 fw-bold" style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>End Date:</p>
+                      <p style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>February 19, 2026</p>
                     </div>
                   </div>
 
                   <div className="border-top border-white opacity-50 pt-4 mt-4">
                     <div className="row">
-                      <div className="col-md-6">
-                        <p className="mb-1"><strong>Supervisor:</strong></p>
-                        <p>Senior React Developer</p>
+                      <div className="col-6 col-md-6">
+                        <p className="mb-1 fw-bold" style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>Supervisor:</p>
+                        <p style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>Senior React Developer</p>
                       </div>
-                      <div className="col-md-6">
-                        <p className="mb-1"><strong>Signature:</strong></p>
-                        <div className="border-bottom border-white d-inline-block" style={{width: '150px'}}></div>
+                      <div className="col-6 col-md-6">
+                        <p className="mb-1 fw-bold" style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>Signature:</p>
+                        <div className="border-bottom border-white d-inline-block" style={{width: 'clamp(100px, 20vw, 150px)'}}></div>
                       </div>
                     </div>
                   </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ProfileCard from '../components/ProfileCard';
 import StatCard from '../components/StatCard';
 import SkillTag from '../components/SkillTag';
@@ -14,6 +14,7 @@ import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function Home() {
   const { toasts, addToast, removeToast } = useToast();
+  const [isVisible, setIsVisible] = useState(false);
 
   // Set document title
   useDocumentTitle('Home - Kiran Panta | React Intern');
@@ -27,9 +28,17 @@ function Home() {
     }
   }, [addToast]);
 
+  // Fade-in animation on mount
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-      <main className="container my-4">
+      <main className={`container my-4 ${isVisible ? 'fade-in' : 'opacity-0'}`}>
         <h1>Namaste! Ma Kiran Panta hun — React Intern at Tech Yatra</h1>
 
         <Counter />

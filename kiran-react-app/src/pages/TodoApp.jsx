@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function TodoApp() {
@@ -9,6 +9,9 @@ function TodoApp() {
   const [inputValue, setInputValue] = useState('');
   const [filter, setFilter] = useState('all');
   const [priority, setPriority] = useState('medium');
+  const [deletedTask, setDeletedTask] = useState(null);
+  const [undoTimeout, setUndoTimeout] = useState(null);
+  const [showCelebration, setShowCelebration] = useState(false);
 
   // Add todo
   const addTodo = () => {
@@ -30,9 +33,34 @@ function TodoApp() {
     ));
   };
 
-  // Delete todo
+  // Delete todo with undo option
   const deleteTodo = (id) => {
+    const taskToDelete = todos.find(todo => todo.id === id);
+    setDeletedTask(taskToDelete);
     setTodos(prev => prev.filter(todo => todo.id !== id));
+
+    // Clear any existing undo timeout
+    if (undoTimeout) {
+      clearTimeout(undoTimeout);
+    }
+
+    // Set new undo timeout (5 seconds)
+    const timeout = setTimeout(() => {
+      setDeletedTask(null);
+    }, 5000);
+    setUndoTimeout(timeout);
+  };
+
+  // Undo delete
+  const undoDelete = () => {
+    if (deletedTask) {
+      setTodos(prev => [...prev, deletedTask]);
+      setDeletedTask(null);
+      if (undoTimeout) {
+        clearTimeout(undoTimeout);
+        setUndoTimeout(null);
+      }
+    }
   };
 
   // Clear completed
@@ -61,8 +89,41 @@ function TodoApp() {
   const activeCount = todos.filter(t => !t.completed).length;
   const completedCount = todos.filter(t => t.completed).length;
 
+  // Celebration effect when all tasks are completed
+  useEffect(() => {
+    if (todos.length > 0 && todos.every(todo => todo.completed)) {
+      setShowCelebration(true);
+      const timer = setTimeout(() => setShowCelebration(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [todos]);
+
   return (
-    <div className="max-w-md mx-auto mt-8 p-4 bg-white rounded-lg shadow-lg">
+    <div className="max-w-md mx-auto mt-8 p-4 bg-white rounded-lg shadow-lg relative">
+      {/* Celebration animation */}
+      {showCelebration && (
+        <div className="absolute inset-0 flex items-center justify-center bg-green-500 bg-opacity-90 rounded-lg z-10 animate-pulse">
+          <div className="text-center text-white">
+            <div className="text-6xl mb-2">🎉</div>
+            <h2 className="text-2xl font-bold">All Tasks Completed!</h2>
+            <p className="text-lg">Great job! 🎊</p>
+          </div>
+        </div>
+      )}
+
+      {/* Undo notification */}
+      {deletedTask && (
+        <div className="mb-4 p-3 bg-yellow-100 border border-yellow-300 rounded-lg flex justify-between items-center">
+          <span className="text-yellow-800">Task deleted: "{deletedTask.text}"</span>
+          <button
+            className="px-3 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition-colors"
+            onClick={undoDelete}
+          >
+            Undo
+          </button>
+        </div>
+      )}
+
       <h1 className="text-2xl font-bold mb-4 text-center">Todo App</h1>
 
       {/* Add todo */}

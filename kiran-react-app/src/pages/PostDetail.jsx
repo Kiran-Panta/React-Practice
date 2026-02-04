@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import LoadingSpinner from '../components/ui/LoadingSpinner';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function PostDetail() {
   const { id } = useParams(); // useParams reads dynamic segment from URL
   const navigate = useNavigate(); // useNavigate for programmatic navigation
+
+  // Set document title
+  useDocumentTitle(`Post ${id} - Kiran Panta | React Intern`);
+
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -28,10 +34,8 @@ function PostDetail() {
 
   if (loading) {
     return (
-      <div className="container my-5 text-center">
-        <div className="spinner-border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
+      <div className="container my-5 d-flex justify-content-center align-items-center" style={{minHeight: '50vh'}}>
+        <LoadingSpinner size="lg" color="blue" />
       </div>
     );
   }
