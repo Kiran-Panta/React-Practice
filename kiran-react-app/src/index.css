@@ -33,6 +33,8 @@
     background-position: -200% 0;
   }
 }
+
+:root {
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;

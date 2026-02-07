@@ -17,13 +17,9 @@ function useDocumentTitle(title) {
             document.title = originalTitle;
         };
     }, [title]); // Re-run when title changes
-
-    // This hook doesn't return anything, just sets the title
 }
 
-// Usage example:
-// In any component: useDocumentTitle('Contact - Kiran Panta');
-// This will set the browser tab to "Contact - Kiran Panta"
+export default useDocumentTitle;
 
 // Defense Q: Custom hooks kasari banau? Why useful?
 // Answer: Custom hooks extract reusable logic from components.
