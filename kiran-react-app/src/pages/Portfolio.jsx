@@ -278,6 +278,33 @@ function Portfolio() {
                     <h5 className="fw-bold mb-3" style={{fontSize: 'clamp(1.1rem, 3vw, 1.5rem)'}}>React Web Development Internship</h5>
                     <p className="mb-2" style={{fontSize: 'clamp(0.9rem, 2.5vw, 1.25rem)'}}>at</p>
                     <h5 className="fw-bold" style={{fontSize: 'clamp(1.1rem, 3vw, 1.5rem)'}}>Tech Yatra Private Limited</h5>
+                    <p className="mt-3 mb-3" style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>
+                      <strong>Certified by Tech Yatra Private Limited</strong>
+                    </p>
+                  </div>
+
+                  <div className="mb-4">
+                    <h6 className="fw-bold mb-3" style={{fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)'}}>Skills Demonstrated:</h6>
+                    <div className="row text-start">
+                      <div className="col-md-6">
+                        <ul className="list-unstyled" style={{fontSize: 'clamp(0.7rem, 1.8vw, 0.9rem)'}}>
+                          <li>• React Components & Hooks</li>
+                          <li>• State Management</li>
+                          <li>• React Router Navigation</li>
+                          <li>• API Integration</li>
+                          <li>• Form Validation</li>
+                        </ul>
+                      </div>
+                      <div className="col-md-6">
+                        <ul className="list-unstyled" style={{fontSize: 'clamp(0.7rem, 1.8vw, 0.9rem)'}}>
+                          <li>• Responsive Design</li>
+                          <li>• CSS Frameworks</li>
+                          <li>• Custom Hooks</li>
+                          <li>• Utility Functions</li>
+                          <li>• Git Version Control</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="row text-center mb-4">
@@ -286,8 +313,8 @@ function Portfolio() {
                       <p style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>December 8, 2025</p>
                     </div>
                     <div className="col-6 col-md-6">
-                      <p className="mb-1 fw-bold" style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>End Date:</p>
-                      <p style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>February 19, 2026</p>
+                      <p className="mb-1 fw-bold" style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>Completion Date:</p>
+                      <p style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>February 17, 2026</p>
                     </div>
                   </div>
 
@@ -301,6 +328,14 @@ function Portfolio() {
                         <p className="mb-1 fw-bold" style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>Signature:</p>
                         <div className="border-bottom border-white d-inline-block" style={{width: 'clamp(100px, 20vw, 150px)'}}></div>
                       </div>
+                    </div>
+
+                    <div className="mt-4 text-center">
+                      <p className="mb-2" style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontStyle: 'italic'}}>
+                        "Thank you to Tech Yatra Private Limited for this incredible learning opportunity.
+                        This internship has transformed my understanding of web development and prepared me for a successful career in React development."
+                      </p>
+                      <p style={{fontSize: 'clamp(0.8rem, 2vw, 1rem)'}}>— Kiran Panta</p>
                     </div>
                   </div>
                 </div>
