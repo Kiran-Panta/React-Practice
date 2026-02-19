@@ -1,3 +1,5 @@
+# ✅ Internship Completed | Dec 8, 2025 – Feb 19, 2026 | Tech Yatra Private Limited
+
 # Kiran Panta's React Internship Journey
 
 Hey everyone! My name is Kiran Panta, and I'm super excited to start my React internship at Tech Yatra Private Limited. Today was my first day, and wow, what a day it was! I woke up early, feeling a mix of excitement and nervousness. "Am I ready for this?" I kept thinking. But when I walked into the office, the environment was so welcoming. The team is amazing, everyone smiled and said hi, and the office has this cool vibe with plants and comfortable chairs. It made me feel like I belong here.
@@ -314,5 +316,5 @@ By the end of Week 9, I have:
 
 ---
 
-*🎓 Successfully completed 9-week React internship at Tech Yatra Private Limited | Ready for defense presentation! 🚀*</content>
+*Built with ❤️ and lots of ☕ by Kiran Panta during her internship at Tech Yatra Private Limited 🇳🇵*</content>
 <parameter name="filePath">d:\React-js(Practice)\README.md
